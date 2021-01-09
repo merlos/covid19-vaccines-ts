@@ -4,7 +4,7 @@
 name: Node.js CI
 on:
   schedule:
-    - cron:  '0 9 * * *'
+  - cron:  '0 9 * * *'
 
 jobs:
   build:
@@ -18,16 +18,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    
     - name: Install 
       run: cd scripts; npm install
-    
     - name: USA
-    - run: |
+      run: |
         cd scripts
         node usa.js 
-    - name: "Commi downloaded files" 
-    - uses: stefanzweifel/git-auto-commit-action@v4
+    - name: "Commit downloaded files" 
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         # Optional but recommended
         # Defaults to "Apply automatic changes"
