@@ -36,7 +36,7 @@ const fs = require("fs")
     console.log("USA DONE!")
     await page.close()
 
-    process.exit(1)
+    process.exit(0) //0 everyhting ok
   } catch (e) {
     console.log(e)
     process.exit(-1)
