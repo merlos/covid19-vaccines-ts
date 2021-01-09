@@ -3,6 +3,11 @@
 
 name: Node.js CI
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Message'     
+        required: false
   schedule:
   - cron:  '0 9 * * *'
   
@@ -29,7 +34,7 @@ jobs:
       with:
         # Optional but recommended
         # Defaults to "Apply automatic changes"
-        commit_message: Dayly update dataset
+        commit_message: Daily update dataset {github.event.inputs.logLevel}
 
         # Optional branch name where commit should be pushed to
         # Defaults to the current branch
