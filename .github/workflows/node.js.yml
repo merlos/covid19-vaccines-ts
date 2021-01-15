@@ -9,7 +9,7 @@ on:
         description: 'Message'     
         required: false
   schedule:
-  - cron:  '0 9 * * *'
+  - cron:  '0 15 * * *' # Everyday at 3.00 pm US Pacific Standard Time (PST). 
   
 jobs:
   build:
