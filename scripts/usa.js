@@ -24,6 +24,9 @@ const fs = require("fs")
     //await page.screenshot({ path: "./image.jpg", type: "jpeg" })
 
     await page.click("#prntVaccinations")
+    await page.waitForSelector("#vaccinations-table-toggle")
+    await page.click("#vaccinations-table-toggle")
+
     await page.waitForSelector("#btnVaccinationsExport")
     //Click on button Download Data button in COVID-19 Vaccinations in the United States​ table
     await page.click("#btnVaccinationsExport")
