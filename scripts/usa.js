@@ -23,7 +23,7 @@ const fs = require("fs")
     await page.setViewport({ width: 1280, height: 800 })
     //await page.screenshot({ path: "./image.jpg", type: "jpeg" })
 
-    await page.click("#prntVaccinations")
+    //await page.click("#prntVaccinations")
     await page.waitForSelector("#vaccinations-table-toggle")
     await page.click("#vaccinations-table-toggle")
 
